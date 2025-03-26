@@ -10,7 +10,7 @@
         "d": "a análise de mobilidade social permite a observação de um ciclo vicioso, que se caracteriza por uma\nsubida nas camadas sociais seguida de uma queda, repeti ndo-se esse ciclo de modo sucessivo.",
         "e": "a ascensão social depende de fatores viabilizadores que estão fora do alcance das camadas pobres,\no que ocasiona confl itos sociais em busca do acesso a tais fatores."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -24,7 +24,7 @@
         "d": "A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.",
         "e": "As asserções I e II são proposições falsas."
       },
-      "image": "./images/q2.png",
+      "images": ["./images/q2.png"],
       "necessImage": true
     },
     {
@@ -38,7 +38,7 @@
         "d": "II e III, apenas.",
         "e": "I, II e III."
       },
-      "image": "./images/q3.png",
+      "images": ["./images/q3.png"],
       "necessImage": true
     },
     {
@@ -52,7 +52,7 @@
         "d": "A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.",
         "e": "As asserções I e II são proposições falsas."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -66,7 +66,7 @@
         "d": "II e IV.",
         "e": "III e IV."
       },
-      "image": "./images/q5.png",
+      "images": ["./images/q5.png"],
       "necessImage": true
     },
     {
@@ -80,7 +80,7 @@
         "d": "A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.",
         "e": "As asserções I e II são proposições falsas."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -94,7 +94,7 @@
         "d": "II e III, apenas.",
         "e": "I, II e III."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -108,7 +108,7 @@
         "d": "I, III e IV.",
         "e": "II, III e IV."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -122,7 +122,7 @@
         "d": "O tempo de resposta do sistema não deve ultrapassar 30 segundos.",
         "e": "A base de dados deve ser protegida para acesso apenas de usuários autorizados."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -136,7 +136,7 @@
         "d": "char alternar_estampa(char estampa, char *proxima) {      *proxima = *proxima == estampa ? ' ' : estampa;      return *proxima;  }   void criar_molde(char molde[][48], int c, int l, char estampa) {      char proxima = estampa;      for (int i = 0; i < l; i++) {          for (int j = 0; j < c; j++)              molde[i][j] = alternar_estampa(estampa, &proxima);          proxima = molde[i];      }  }",
         "e": "char alternar_estampa(char estampa, char proxima) {      proxima = proxima == estampa ? ' ' : estampa;      return proxima;  }   void criar_molde(char molde[][48], int c, int l, char estampa) {     char proxima = estampa;      for (int i = 0; i < l; i++) {          for (int j = 0; j < c; j++)              molde[i][j] = alternar_estampa(estampa, proxima);          proxima = molde[i];      }  }"
       },
-      "image": "./images/q10.png",
+      "images": ["./images/q10.png"],
       "necessImage": true
     },
     {
@@ -150,7 +150,7 @@
         "d": "public void push(int elemento){\nNo novo = new No(elemento);\nwhile (topo != null)\ntopo = topo.prox;\ntopo.prox = novo;\n}",
         "e": "public void push(int elemento){\nNo novo = new No(elemento);\nnovo.prox = topo;\ntopo = novo;\n}"
       },
-      "image": "./images/q11.png",
+      "images": ["./images/q11.png"],
       "necessImage": true
     },
     {
@@ -164,7 +164,7 @@
         "d": "I, III e IV.",
         "e": "II, III e IV."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -178,7 +178,7 @@
         "d": "pilha: topo → B → A. fila: início → D → B → C → E.",
         "e": "pilha: topo → C → B → A. fila: início → D → B → C → E."
       },
-      "image": "./images/q13.png",
+      "images": ["./images/q13.png"],
       "necessImage": true
     },
     {
@@ -192,7 +192,7 @@
         "d": "qualidade.",
         "e": "partes interessadas."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -206,7 +206,7 @@
         "d": "\nContato\n- descricao : String\n- numero : int\nEstudante\n- nascimento : Date\nResponsavel\nProfessorPessoa\n- nome : String\nCurso\n- nome : String\nTurma\n- id : int\nHorario\n- dia : String\n- horaInicio : Date\n- horaFim : Date\nMatricula\n- data : Date\n1..*\n0..*\n0..*\n0..*\n1..*\n1\n1\n1\n1\n1",
         "e": "\nContato\n- descricao : String\n- numero : int\nEstudante\n- nascimento : Date\nResponsavel\nProfessorPessoa\n- nome : String\nCurso\n- nome : String\nTurma\n- id : int\nHorario\n- dia : String\n- horaInicio : Date\n- horaFim : Date\nMatricula\n- data : Date\n0..*\n0..*\n0..*\n0..*\n1..*\n1..*\n1..*\n1\n1\n1\n1"
       },
-      "image": "./images/q15.png",
+      "images": ["./images/q15.png", "./images/q15options.png"],
       "necessImage": true
     },
     {
@@ -220,7 +220,7 @@
         "d": "O diagrama apresenta um erro ao não representar as mensagens de retorno depois da destruição dos objetos.",
         "e": "A mensagem 4 pode ser substituída pelo estereótipo <<create>> sem causar prejuízo à interpretação correta do Diagrama de Sequência representado."
       },
-      "image": "./images/q16.png",
+      "images": ["./images/q16.png"],
       "necessImage": true
     },
     {
@@ -234,7 +234,7 @@
         "d": "SELECT CL.NOME, AVG(HM.VAL_MOVIMENTADO) FROM CLIENTE CL LEFT OUTER JOIN CONTA CO ON CL.COD_CLIENTE = CO.NUM_CONTA LEFT OUTER JOIN HISTORICO_MOVIMENTACAO HM ON CO.NUM_CONTA = HM.COD_HISTORICO_ MOVIMENTACAO GROUP BY CL.NOME ORDER BY AVG(HM.VAL_MOVIMENTADO) DESC",
         "e": "SELECT CL.NOME, AVG(HM.VAL_MOVIMENTADO) FROM CLIENTE CL LEFT OUTER JOIN CONTA CO ON CL.COD_CLIENTE = CO.COD_CLIENTE LEFT OUTER JOIN HISTORICO_MOVIMENTACAO HM ON CO.NUM_CONTA = HM.NUM_CONTA GROUP BY CL.NOME ORDER BY AVG(HM.VAL_MOVIMENTADO) DESC"
       },
-      "image": "./images/q17.png",
+      "images": ["./images/q17.png", "./images/q17options.png"],
       "necessImage": true
     },
     {
@@ -248,7 +248,7 @@
         "d": "Documento de entrevista com usuários; modelo de caso de uso para os requisitos não-funcionais; matriz de rastreabilidade.",
         "e": "Documento de estudo de viabilidade; modelo de caso de uso para os requisitos funcionais; matriz de rastreabilidade."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -262,7 +262,7 @@
         "d": "I, II e IV.",
         "e": "I, III e IV."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -276,7 +276,7 @@
         "d": "I, III e IV.",
         "e": "II, III e IV."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -290,7 +290,7 @@
         "d": "Construção de modelo de requisitos, métricas para modelo de projeto, métricas de controle de versão e relatório de manutenção.",
         "e": "Identificação de alterações, controle de versão, mapeamento de alteração e notificação da alteração aos envolvidos."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -304,7 +304,7 @@
         "d": "I, II e IV.",
         "e": "I, III e IV."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -318,8 +318,8 @@
         "d": "preventiva.",
         "e": "adaptativa."
       },
-      "image": "./images/q23.png",
-      "necessImage": true
+      "images": ["./images/q23.png"],
+      "necessImage": false
     },
     {
       "question": 24,
@@ -332,7 +332,7 @@
         "d": "I, IV e V.",
         "e": "II, III, IV e V."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -346,7 +346,7 @@
         "d": "II e III.",
         "e": "III e IV."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -360,7 +360,7 @@
         "d": "O direito ao anonimato; a liberdade de expressão; a inviolabilidade da intimidade; a adoção de medidas preventivas de segurança; o direito ao recurso e revisão; a administração de riscos e falhas; o estabelecimento de agentes de tratamento; e, regulação da Autoridade Nacional de Proteção de Dados Pessoais (ANPD).",
         "e": "O respeito à privacidade; a autodeterminação informativa; a liberdade de expressão, de informação, de comunicação e de opinião; a inviolabilidade da intimidade, da honra e da imagem; o desenvolvimento econômico e tecnológico e a inovação; a livre iniciativa, a livre concorrência e a defesa do consumidor; e, os direitos humanos, o livre desenvolvimento da personalidade, dignidade e o exercício da cidadania pelas pessoas naturais."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -374,8 +374,8 @@
         "d": "(316)10",
         "e": "(345)10"
       },
-      "image": "./images/q27.png",
-      "necessImage": true
+      "images": ["./images/q27.png"],
+      "necessImage": false
     },
     {
       "question": 28,
@@ -388,7 +388,7 @@
         "d": "o gerenciamento de processos.",
         "e": "o gerenciamento de entrada e saída."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -402,7 +402,7 @@
         "d": "22.",
         "e": "30."
       },
-      "image": null,
+      "images": ["./images/q29.png"],
       "necessImage": false
     },
     {
@@ -416,7 +416,7 @@
         "d": "Alterar a máscara de sub-rede da estação PROFESSORES03 para 255.255.255.0.",
         "e": "Alterar o gateway da estação PROFESSORES01 para o endereço de IP 175.16.30.200."
       },
-      "image": "./images/q30.png",
+      "images": ["./images/q30.png"],
       "necessImage": true
     },
     {
@@ -430,7 +430,7 @@
         "d": "II, III e V.",
         "e": "II, III, IV e V."
       },
-      "image": "./images/q31.png",
+      "images": ["./images/q31.png"],
       "necessImage": true
     },
     {
@@ -444,7 +444,7 @@
         "d": "de logística utilizam o plano de negócios ao invés do Canvas, ou seja, elas nascem a partir de um produto mínimo viável (MVP).",
         "e": "de impacto social podem desconsiderar o componente 1 (segmentos de clientes), pois possuem somente um segmento."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -458,7 +458,7 @@
         "d": "I, III e IV.",
         "e": "I, II, III e IV."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -472,7 +472,7 @@
         "d": "cada pessoa que chega apresentando um dos dois sintomas estará com resfriado comum.",
         "e": "a cada 100 pessoas que procuram atendimento, no máximo 30 estarão doentes."
       },
-      "image": null,
+      "images": [],
       "necessImage": false
     },
     {
@@ -486,7 +486,7 @@
         "d": "I, II e IV.",
         "e": "I, III e IV."
       },
-      "image": "./images/q35.png",
+      "images": ["./images/q35.png", "./images/q35-2.png"],
       "necessImage": true
     }
   ]
