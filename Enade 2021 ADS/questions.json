@@ -151,7 +151,7 @@
         "e": "public void push(int elemento){\nNo novo = new No(elemento);\nnovo.prox = topo;\ntopo = novo;\n}"
       },
       "images": ["./images/q11.png"],
-      "necessImage": true
+      "necessImage": false
     },
     {
       "question": 12,
@@ -179,7 +179,7 @@
         "e": "pilha: topo → C → B → A. fila: início → D → B → C → E."
       },
       "images": ["./images/q13.png"],
-      "necessImage": true
+      "necessImage": false
     },
     {
       "question": 14,
