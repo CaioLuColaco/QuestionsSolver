@@ -1,9 +1,16 @@
 import 'dotenv/config';
 import fs from 'fs/promises';
 import path from 'path';
+import { z } from 'zod';
+import { zodResponseFormat } from "openai/helpers/zod";
 import OpenAI from 'openai';
 
 const openai = new OpenAI();
+
+const ChatSchema = z.object({
+  chatAnswer: z.string(),
+  chatReasoning: z.string(),
+});
 
 const index = async () => {
   const testDirPath = './Enade 2021 ADS';
@@ -21,7 +28,7 @@ const index = async () => {
       results.push({
         questionNumber: question.question,
         chatAnswer: structuredOutput.chatAnswer.toLowerCase(),
-        correctAnswer: question.answer,
+        correctAnswer: question.answer.toLowerCase(),
         chatReasoning: structuredOutput.chatReasoning,
       });
     } else {
@@ -94,21 +101,20 @@ async function sendQuestionToOpenAI(question, base64Images) {
       }
     ];
 
-    const response = await openai.chat.completions.create({
+    const completion = await openai.beta.chat.completions.parse({
       model: 'gpt-4o',
       messages,
-      temperature: 0.3,
+      response_format: zodResponseFormat(ChatSchema, 'structured_chat'),
     });
 
-    console.log(response.choices[0].message.content)
+    const { refusal, parsed } = completion.choices[0].message;
 
-    let content = response.choices[0].message.content.trim();
-
-    if (content.startsWith('```')) {
-      content = content.replace(/```(?:json)?\n?/g, '').replace(/```$/, '').trim();
+    if (refusal) {
+      console.warn(`Questão ${question.question} recusada:`, refusal);
+      return null;
     }
-
-    return JSON.parse(content);
+    console.log(parsed)
+    return parsed;
   } catch (error) {
     console.error(`Erro na questão ${question.question}:`, error.message);
     return null;
