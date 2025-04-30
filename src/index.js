@@ -10,7 +10,8 @@ const index = async () => {
   const testFilePath = './Enade 2021 ADS/questions.json';
   const outputPath = './results.json';
 
-  const validQuestions = await getValidQuestions(testFilePath);
+  const allQuestions = await getAllQuestions(testFilePath);
+  const validQuestions = allQuestions.filter((q) => q.necessImage && q.tecnicalQuestion);
   const results = [];
 
   for (const question of validQuestions) {
@@ -18,28 +19,40 @@ const index = async () => {
     const structuredOutput = await sendQuestionToOpenAI(question, base64Images);
 
     if (structuredOutput) {
-      results.push({
-        questionNumber: question.question,
+      const attempt = {
         chatAnswer: structuredOutput.chatAnswer.toLowerCase(),
         correctAnswer: question.answer.toLowerCase(),
         chatReasoning: structuredOutput.chatReasoning,
+      };
+
+      results.push({
+        questionNumber: question.question,
+        ...attempt,
       });
+
+      // Adiciona a tentativa na pergunta correspondente
+      const originalQuestion = allQuestions.find((q) => q.question === question.question);
+      if (originalQuestion) {
+        originalQuestion.attempts = originalQuestion.attempts || [];
+        originalQuestion.attempts.push(attempt);
+      }
     } else {
       console.warn(`❗ Questão ${question.question} falhou e será ignorada.`);
     }
   }
 
   await saveResults(outputPath, results);
+  await saveUpdatedQuestions(testFilePath, allQuestions);
   console.log(`✅ Resultados salvos em ${outputPath}`);
+  console.log(`✅ Questões atualizadas com tentativas salvas em ${testFilePath}`);
 };
 
-async function getValidQuestions(filePath) {
+async function getAllQuestions(filePath) {
   try {
     const data = await fs.readFile(filePath, 'utf-8');
-    const questions = JSON.parse(data);
-    return questions.filter((q) => q.necessImage && q.tecnicalQuestion);
+    return JSON.parse(data);
   } catch (error) {
-    console.error('Erro ao processar o arquivo:', error);
+    console.error('Erro ao processar o arquivo de questões:', error);
     return [];
   }
 }
@@ -118,6 +131,14 @@ async function saveResults(filePath, data) {
     await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
   } catch (error) {
     console.error('Erro ao salvar resultados:', error);
+  }
+}
+
+async function saveUpdatedQuestions(filePath, updatedQuestions) {
+  try {
+    await fs.writeFile(filePath, JSON.stringify(updatedQuestions, null, 2), 'utf-8');
+  } catch (error) {
+    console.error('Erro ao salvar questões atualizadas:', error);
   }
 }
 
