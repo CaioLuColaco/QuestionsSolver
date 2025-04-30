@@ -12,7 +12,8 @@
       },
       "images": [],
       "necessImage": false,
-      "tecnicalQuestion": false
+      "tecnicalQuestion": false,
+      "attempts": []
     },
     {
       "question": 2,
@@ -27,7 +28,8 @@
       },
       "images": ["./images/q2.png"],
       "necessImage": true,
-      "tecnicalQuestion": false
+      "tecnicalQuestion": false,
+      "attempts": []
     },
     {
       "question": 3,
@@ -42,7 +44,8 @@
       },
       "images": ["./images/q3.png"],
       "necessImage": true,
-      "tecnicalQuestion": false
+      "tecnicalQuestion": false,
+      "attempts": []
     },
     {
       "question": 4,
@@ -57,7 +60,8 @@
       },
       "images": [],
       "necessImage": false,
-      "tecnicalQuestion": false
+      "tecnicalQuestion": false,
+      "attempts": []
     },
     {
       "question": 5,
@@ -72,7 +76,8 @@
       },
       "images": ["./images/q5.png"],
       "necessImage": true,
-      "tecnicalQuestion": false
+      "tecnicalQuestion": false,
+      "attempts": []
     },
     {
       "question": 6,
@@ -87,7 +92,8 @@
       },
       "images": [],
       "necessImage": false,
-      "tecnicalQuestion": false
+      "tecnicalQuestion": false,
+      "attempts": []
     },
     {
       "question": 7,
@@ -102,7 +108,8 @@
       },
       "images": [],
       "necessImage": false,
-      "tecnicalQuestion": false
+      "tecnicalQuestion": false,
+      "attempts": []
     },
     {
       "question": 8,
@@ -117,7 +124,8 @@
       },
       "images": [],
       "necessImage": false,
-      "tecnicalQuestion": false
+      "tecnicalQuestion": false,
+      "attempts": []
     },
     {
       "question": 9,
@@ -134,7 +142,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Very good"
+      "discriminationIndex": "Very good",
+      "attempts": []
     },
     {
       "question": 10,
@@ -151,7 +160,8 @@
       "necessImage": true,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Weak"
+      "discriminationIndex": "Weak",
+      "attempts": []
     },
     {
       "question": 11,
@@ -168,7 +178,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Medium"
+      "discriminationIndex": "Medium",
+      "attempts": []
     },
     {
       "question": 12,
@@ -185,7 +196,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Weak"
+      "discriminationIndex": "Weak",
+      "attempts": []
     },
     {
       "question": 13,
@@ -202,7 +214,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Good"
+      "discriminationIndex": "Good",
+      "attempts": []
     },
     {
       "question": 14,
@@ -219,7 +232,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Medium"
+      "discriminationIndex": "Medium",
+      "attempts": []
     },
     {
       "question": 15,
@@ -236,7 +250,8 @@
       "necessImage": true,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Medium"
+      "discriminationIndex": "Medium",
+      "attempts": []
     },
     {
       "question": 16,
@@ -253,7 +268,8 @@
       "necessImage": true,
       "tecnicalQuestion": true,
       "easeLevel": "Very Hard",
-      "discriminationIndex": "Weak"
+      "discriminationIndex": "Weak",
+      "attempts": []
     },
     {
       "question": 17,
@@ -270,7 +286,8 @@
       "necessImage": true,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Medium"
+      "discriminationIndex": "Medium",
+      "attempts": []
     },
     {
       "question": 18,
@@ -287,7 +304,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Medium",
-      "discriminationIndex": "Good"
+      "discriminationIndex": "Good",
+      "attempts": []
     },
     {
       "question": 19,
@@ -304,7 +322,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Very Good"
+      "discriminationIndex": "Very Good",
+      "attempts": []
     },
     {
       "question": 20,
@@ -321,7 +340,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Medium",
-      "discriminationIndex": "Very Good"
+      "discriminationIndex": "Very Good",
+      "attempts": []
     },
     {
       "question": 21,
@@ -338,7 +358,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Medium"
+      "discriminationIndex": "Medium",
+      "attempts": []
     },
     {
       "question": 22,
@@ -355,7 +376,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Medium"
+      "discriminationIndex": "Medium",
+      "attempts": []
     },
     {
       "question": 23,
@@ -372,7 +394,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Medium",
-      "discriminationIndex": "Good"
+      "discriminationIndex": "Good",
+      "attempts": []
     },
     {
       "question": 24,
@@ -389,7 +412,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Good"
+      "discriminationIndex": "Good",
+      "attempts": []
     },
     {
       "question": 25,
@@ -406,7 +430,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Good"
+      "discriminationIndex": "Good",
+      "attempts": []
     },
     {
       "question": 26,
@@ -423,7 +448,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Weak"
+      "discriminationIndex": "Weak",
+      "attempts": []
     },
     {
       "question": 27,
@@ -440,7 +466,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Medium"
+      "discriminationIndex": "Medium",
+      "attempts": []
     },
     {
       "question": 28,
@@ -457,7 +484,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Good"
+      "discriminationIndex": "Good",
+      "attempts": []
     },
     {
       "question": 29,
@@ -474,7 +502,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Good"
+      "discriminationIndex": "Good",
+      "attempts": []
     },
     {
       "question": 30,
@@ -491,7 +520,8 @@
       "necessImage": true,
       "tecnicalQuestion": true,
       "easeLevel": "Medium",
-      "discriminationIndex": "Very Good"
+      "discriminationIndex": "Very Good",
+      "attempts": []
     },
     {
       "question": 31,
@@ -508,7 +538,8 @@
       "necessImage": true,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Weak"
+      "discriminationIndex": "Weak",
+      "attempts": []
     },
     {
       "question": 32,
@@ -525,7 +556,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Medium"
+      "discriminationIndex": "Medium",
+      "attempts": []
     },
     {
       "question": 33,
@@ -542,7 +574,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Weak"
+      "discriminationIndex": "Weak",
+      "attempts": []
     },
     {
       "question": 34,
@@ -559,7 +592,8 @@
       "necessImage": false,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Very Good"
+      "discriminationIndex": "Very Good",
+      "attempts": []
     },
     {
       "question": 35,
@@ -576,6 +610,7 @@
       "necessImage": true,
       "tecnicalQuestion": true,
       "easeLevel": "Hard",
-      "discriminationIndex": "Medium"
+      "discriminationIndex": "Medium",
+      "attempts": []
     }
   ]

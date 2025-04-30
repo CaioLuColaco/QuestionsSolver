@@ -21,7 +21,7 @@ const index = async () => {
       results.push({
         questionNumber: question.question,
         chatAnswer: structuredOutput.chatAnswer.toLowerCase(),
-        correctAnswer: question.answer,
+        correctAnswer: question.answer.toLowerCase(),
         chatReasoning: structuredOutput.chatReasoning,
       });
     } else {
@@ -37,7 +37,7 @@ async function getValidQuestions(filePath) {
   try {
     const data = await fs.readFile(filePath, 'utf-8');
     const questions = JSON.parse(data);
-    return questions.filter(q => q.necessImage && q.tecnicalQuestion);
+    return questions.filter((q) => q.necessImage && q.tecnicalQuestion);
   } catch (error) {
     console.error('Erro ao processar o arquivo:', error);
     return [];
@@ -45,7 +45,7 @@ async function getValidQuestions(filePath) {
 }
 
 async function loadBase64Images(imagePaths, testDirPath) {
-  const promises = imagePaths.map(async imagePath => {
+  const promises = imagePaths.map(async (imagePath) => {
     try {
       const resolvedPath = path.resolve(path.join(testDirPath, imagePath));
       const base64 = await fs.readFile(resolvedPath, 'base64');
@@ -86,12 +86,12 @@ async function sendQuestionToOpenAI(question, base64Images) {
               `Retorne no seguinte formato JSON:\n` +
               `{\n  "chatAnswer": "letra",\n  "chatReasoning": "raciocínio completo"\n}`
           },
-          ...base64Images.map(image => ({
+          ...base64Images.map((image) => ({
             type: 'image_url',
-            image_url: { url: image }
-          }))
-        ]
-      }
+            image_url: { url: image },
+          })),
+        ],
+      },
     ];
 
     const response = await openai.chat.completions.create({
@@ -99,8 +99,6 @@ async function sendQuestionToOpenAI(question, base64Images) {
       messages,
       temperature: 0.3,
     });
-
-    console.log(response.choices[0].message.content)
 
     let content = response.choices[0].message.content.trim();
 
