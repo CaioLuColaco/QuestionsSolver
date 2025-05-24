@@ -91,14 +91,15 @@ async function sendQuestionToOpenAI(question, base64Images) {
               ---
 
               ### Instruções
-              Resolva a questão apresentada a seguir utilizando a técnica de Self-Consistency da seguinte forma:
+              Resolva a questão apresentada a seguir utilizando a técnica Tree of Thoughts da seguinte forma:
 
-              1. Gere múltiplos caminhos de raciocínio plausíveis para resolver a questão, considerando diferentes abordagens válidas.
-              2. Para cada caminho, explicite a dedução passo a passo até chegar a uma resposta final.
-              3. Após gerar todos os caminhos de raciocínio, identifique qual resposta é mais consistente entre os diferentes caminhos gerados (i.e., a resposta mais recorrente entre eles).
-              4. Justifique a resposta final escolhida com base na consistência entre os caminhos e refute outras possíveis respostas, se necessário.
-              5. Caso nenhuma alternativa seja correta, ou se houver inconsistência significativa nos caminhos válidos, retorne a letra "I".
-              6. Ao final, retorne no seguinte formato JSON:
+              1. Decomponha o problema em uma sequência de pensamentos (steps) intermediários. Cada "thought" é uma etapa lógica clara e significativa no processo de solução.
+              2. Em cada estado, gere múltiplas opções de pensamento possíveis para avançar na solução (branching).
+              3. Avalie cada pensamento candidato com base em critérios de progresso rumo à solução final. Use raciocínio deliberado para determinar qual pensamento seguir (pode usar votos, pontuações ou classificações).
+              4. Continue explorando os caminhos mais promissores utilizando uma estratégia de busca (ex: busca em largura - BFS ou busca em profundidade - DFS). Considere retroceder se necessário (backtracking).
+              5. Ao atingir um estado final (uma solução completa), pare a busca e apresente a resposta final.
+              6. Caso nenhum caminho leve a uma resposta válida ou se todas as alternativas forem incorretas, retorne a letra "I".
+              7. Ao final, retorne no seguinte formato JSON:
 
               {\n "chatAnswer": "letra",\n "chatReasoning": "raciocínio completo"\n}
 
@@ -108,7 +109,7 @@ async function sendQuestionToOpenAI(question, base64Images) {
               **Questão 0:**
               Quantos triângulos estão presentes na imagem?
 
-              **Imagem:** mostra uma figura composta por dois triângulos pequenos dentro de um triângulo maior.
+              **Imagem:** mostra dois triângulos pequenos dentro de um triângulo maior.
 
               **Alternativas:**
               A: 2  
@@ -117,19 +118,22 @@ async function sendQuestionToOpenAI(question, base64Images) {
               D: 5  
               I: Nenhuma das anteriores
 
-              **Caminhos de raciocínio gerados:**
-              1. Há dois triângulos pequenos lado a lado, e um triângulo grande envolvendo os dois. Total: 3 triângulos. → Resposta: B
-              2. Contando os dois triângulos internos e o triângulo externo que os contém: 2 + 1 = 3 triângulos. → Resposta: B
-              3. Um triângulo formado pela junção dos dois menores, mais os dois individuais: 3 triângulos. → Resposta: B
-              4. Poderia parecer que são mais, mas visualmente distinguem-se 3 triângulos: dois internos e um externo. → Resposta: B
-
-              **Resposta Final (por consistência):**
-              A resposta mais consistente entre os caminhos gerados é a letra B.
+              **Etapas de raciocínio como árvore:**
+              1. Estado inicial: imagem com formas geométricas.
+              2. Geração de pensamentos:
+                - T1: Contar apenas os dois triângulos pequenos → Total: 2 → A
+                - T2: Contar os dois pequenos + o triângulo maior → Total: 3 → B
+                - T3: Considerar a sobreposição e sub-regiões → Possível confusão, mas não há subdivisão extra visível
+              3. Avaliação dos pensamentos:
+                - T1: Parcialmente correto, mas ignora figura maior.
+                - T2: Coerente com a estrutura da imagem.
+                - T3: Suposições não sustentadas pela imagem.
+              4. Escolha final por heurística/voto: T2 é o pensamento mais promissor.
 
               **Resposta em JSON:**
               {
                 "chatAnswer": "b",
-                "chatReasoning": "A maioria dos caminhos gerados concordam que existem dois triângulos internos e um triângulo externo, totalizando três triângulos. Portanto, a resposta mais consistente é a alternativa B."
+                "chatReasoning": "Após explorar diferentes caminhos de raciocínio, o pensamento que considera os dois triângulos pequenos e o triângulo maior foi avaliado como mais consistente com a imagem. Assim, a resposta correta é B."
               }
 
               ---
