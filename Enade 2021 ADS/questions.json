@@ -169,7 +169,58 @@
     "tecnicalQuestion": true,
     "easeLevel": "Hard",
     "discriminationIndex": "Weak",
-    "attempts": []
+    "attempts": [
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "d",
+        "chatReasoning": "A alternativa A implementa corretamente a função alternar_estampa, que alterna entre o caractere de estampa e um espaço em branco, atualizando o valor de 'proxima' por referência. A função criar_molde utiliza essa alternância para preencher a matriz 'molde' de forma correta, alternando os caracteres conforme esperado para criar o padrão quadriculado. As outras alternativas não manipulam corretamente a alternância ou a atualização do caractere 'proxima'."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "d",
+        "chatReasoning": "A alternativa A implementa corretamente a função alternar_estampa usando um ponteiro para modificar a variável proxima, garantindo a alternância entre o caractere de estampa e o espaço em branco. A função criar_molde preenche a matriz molde com o padrão alternado, utilizando a função alternar_estampa para cada posição da matriz. As outras alternativas não manipulam corretamente a variável proxima ou não garantem a alternância desejada."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "d",
+        "chatReasoning": "A função 'alternar_estampa' na alternativa A utiliza um ponteiro para 'proxima', permitindo que a variável seja atualizada corretamente a cada chamada. Isso garante que a estampa alterna entre o caractere de estampa e um espaço em branco. A função 'criar_molde' então usa 'alternar_estampa' para preencher a matriz 'molde' de forma alternada, como esperado. As outras alternativas falham em alternar corretamente a estampa, seja por não atualizar 'proxima' corretamente ou por não usar ponteiros adequadamente."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "d",
+        "chatReasoning": "A função 'alternar_estampa' na alternativa A utiliza um ponteiro para modificar o valor de 'proxima' diretamente, alternando entre o caractere de estampa e um espaço. A função 'criar_molde' preenche a matriz 'molde' com o padrão alternado corretamente, usando a função 'alternar_estampa'. As outras alternativas não manipulam corretamente o valor de 'proxima' ou não utilizam ponteiros adequadamente."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "d",
+        "chatReasoning": "A alternativa A implementa corretamente as funções criar_molde e alternar_estampa. A função alternar_estampa alterna entre o caractere de estampa e um espaço em branco, utilizando um ponteiro para modificar o valor de 'proxima'. A função criar_molde utiliza essa alternância para preencher a matriz 'molde' de forma correta, alternando os caracteres em cada posição da matriz. As outras alternativas não utilizam corretamente o ponteiro ou não alternam os caracteres conforme necessário."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "d",
+        "chatReasoning": "A função 'alternar_estampa' na alternativa A utiliza um ponteiro para modificar o valor de 'proxima', garantindo que a alternância entre os caracteres '#' e ' ' seja mantida corretamente ao longo da matriz. A função 'criar_molde' preenche a matriz 'molde' com base na alternância definida, resultando no padrão quadriculado desejado. As outras alternativas não manipulam o valor de 'proxima' corretamente ou não usam ponteiros, o que impede a alternância correta dos caracteres na matriz."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "d",
+        "chatReasoning": "A função `alternar_estampa` na alternativa A recebe um ponteiro para `proxima`, permitindo que a variável seja atualizada corretamente a cada chamada. Isso garante que a estampa alterna entre o caractere de estampa e espaço em branco. A função `criar_molde` usa essa alternância para preencher a matriz `molde` de forma correta, alternando os caracteres em cada posição. As outras alternativas não atualizam `proxima` corretamente ou não usam ponteiros, resultando em um padrão incorreto."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "d",
+        "chatReasoning": "A função 'alternar_estampa' na alternativa A utiliza um ponteiro para 'proxima', permitindo que a variável seja atualizada corretamente a cada chamada. Isso garante que a estampa seja alternada entre o caractere de estampa e um espaço em branco, criando o padrão quadriculado desejado. As demais alternativas não atualizam 'proxima' corretamente ou não usam ponteiros, o que impede a alternância correta do padrão."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "d",
+        "chatReasoning": "A alternativa A implementa corretamente as funções criar_molde e alternar_estampa. A função alternar_estampa recebe um ponteiro para o caractere proxima, permitindo que a variável seja atualizada corretamente para alternar entre o caractere da estampa e o espaço em branco. A função criar_molde utiliza essa alternância para preencher a matriz com o padrão desejado. As outras alternativas não manipulam o ponteiro corretamente ou não alternam o caractere como esperado."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "d",
+        "chatReasoning": "A alternativa A implementa corretamente a função 'alternar_estampa' utilizando um ponteiro para modificar o valor de 'proxima' diretamente. Isso permite alternar entre o caractere da estampa e um espaço em branco, garantindo o padrão quadriculado desejado. A função 'criar_molde' utiliza essa alternação para preencher a matriz 'molde' de forma adequada, iterando sobre as linhas e colunas e aplicando a função de alternância. As outras alternativas não manipulam o ponteiro corretamente ou não aplicam a alternância de forma eficaz."
+      }
+    ]
   },
   {
     "question": 11,
@@ -266,7 +317,58 @@
     "tecnicalQuestion": true,
     "easeLevel": "Hard",
     "discriminationIndex": "Medium",
-    "attempts": [ ]
+    "attempts": [
+      {
+        "chatAnswer": "b",
+        "correctAnswer": "b",
+        "chatReasoning": "A opção B é a correta porque reflete adequadamente o cenário descrito: \n\n1. O relacionamento entre 'Estudante' e 'Matricula' é de 0..* para 1..*, permitindo que um estudante possa ter várias matrículas e cada matrícula esteja associada a um estudante.\n2. O relacionamento entre 'Curso' e 'Turma' é de 1..* para 1, indicando que um curso pode ter várias turmas, mas cada turma pertence a um único curso.\n3. O relacionamento entre 'Turma' e 'Horario' é de 1 para 1..*, permitindo que uma turma tenha vários horários.\n4. O relacionamento entre 'Professor' e 'Curso' é de 0..* para 1, permitindo que um professor possa ensinar vários cursos.\n\nEsses relacionamentos refletem corretamente a estrutura necessária para modelar o sistema de matrículas da fundação, conforme descrito na tabela fornecida."
+      },
+      {
+        "chatAnswer": "b",
+        "correctAnswer": "b",
+        "chatReasoning": "A opção B apresenta um diagrama de classes que reflete corretamente o cenário descrito. Cada estudante pode ter múltiplas matrículas (0..*), e cada matrícula está associada a uma turma (1..*). As turmas têm um horário específico e estão associadas a um curso. Além disso, cada estudante tem um responsável e pode ter múltiplos contatos. As multiplicidades e associações estão de acordo com a necessidade de gerenciar múltiplas inscrições e cursos para cada estudante, conforme descrito no problema."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "b",
+        "chatReasoning": "A opção C é a que melhor representa o cenário descrito. Cada estudante pode ter múltiplas matrículas, e cada matrícula está associada a um curso e uma turma. A relação entre Estudante e Matricula é de 0..* para Matricula, indicando que um estudante pode ter várias matrículas. A relação entre Curso e Turma é de 1 para Curso e 1..* para Turma, o que faz sentido, pois um curso pode ter várias turmas. Além disso, a relação entre Turma e Horario é de 1 para Turma e 1 para Horario, o que é consistente com a necessidade de especificar horários para cada turma. Portanto, a opção C é a mais adequada."
+      },
+      {
+        "chatAnswer": "b",
+        "correctAnswer": "b",
+        "chatReasoning": "A opção B é a que melhor representa o cenário descrito. O diagrama de classes inclui as entidades principais: Contato, Pessoa, Estudante, Responsável, Professor, Curso, Turma, Horário e Matrícula. As associações entre as classes estão de acordo com a necessidade de representar múltiplas matrículas por estudante e a possibilidade de um estudante estar associado a múltiplos cursos e horários. Além disso, a relação entre Turma e Horário está corretamente modelada, permitindo que uma turma tenha múltiplos horários, o que é necessário para representar a tabela fornecida."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "b",
+        "chatReasoning": "A opção C apresenta um diagrama de classes que reflete corretamente o cenário descrito. Cada estudante pode ter múltiplos contatos e um responsável, o que é representado pelas multiplicidades entre as classes Estudante, Contato e Responsável. A classe Matricula está associada a Estudante e Turma, permitindo que um estudante se matricule em várias turmas. Além disso, a associação entre Curso e Turma está correta, pois uma turma está associada a um curso específico. As multiplicidades e associações refletem adequadamente o controle de matrículas e cursos descrito na planilha."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "b",
+        "chatReasoning": "A opção C apresenta um diagrama de classes que reflete corretamente o cenário descrito. Cada estudante pode ter várias matrículas (0..*), e cada matrícula está associada a um curso e a uma turma. A relação entre Curso e Turma é de 1 para 1..*, o que faz sentido, pois um curso pode ter várias turmas. Além disso, a associação entre Estudante e Matricula é de 0..* para 1, refletindo que um estudante pode ter várias matrículas, mas cada matrícula pertence a um único estudante. As outras opções apresentam cardinalidades que não correspondem adequadamente ao cenário descrito."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "b",
+        "chatReasoning": "A análise dos diagramas de classes deve considerar as relações entre as entidades e a cardinalidade correta. Na tabela fornecida, um estudante pode estar matriculado em vários cursos, e cada curso pode ter vários estudantes. Além disso, cada curso tem um horário e um professor associado. A opção C reflete corretamente essas relações:\n\n- A classe 'Matricula' está associada a 'Estudante' e 'Turma', permitindo que um estudante tenha várias matrículas (0..*), e cada matrícula está associada a uma turma específica.\n- A 'Turma' está associada a 'Curso' e 'Horario', refletindo que cada turma tem um curso e um horário específico.\n- A relação entre 'Curso' e 'Professor' é 0..* para 'Curso', indicando que um curso pode ter vários professores, o que está de acordo com a tabela.\n\nPortanto, a opção C é a que melhor representa o cenário descrito."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "b",
+        "chatReasoning": "A alternativa C apresenta um diagrama de classes que reflete corretamente o cenário descrito. Cada estudante pode ter múltiplas matrículas (0..*), e cada matrícula está associada a uma turma específica (1). A turma está associada a um curso (1), e cada curso pode ter múltiplas turmas (0..*). O diagrama também mostra que um responsável pode ter múltiplos contatos (1..*), o que está de acordo com a tabela fornecida. Além disso, o relacionamento entre estudante e responsável está correto, pois cada estudante deve ter pelo menos um responsável (1..*)."
+      },
+      {
+        "chatAnswer": "b",
+        "correctAnswer": "b",
+        "chatReasoning": "A alternativa B apresenta um diagrama de classes que reflete corretamente o cenário descrito. Cada estudante pode ter múltiplas matrículas, e cada matrícula está associada a um curso e a um horário específico. A relação entre as classes está bem definida, com as multiplicidades corretas para representar o relacionamento entre estudantes, cursos, turmas e horários. Além disso, a classe 'Pessoa' é utilizada como uma superclasse para 'Estudante', 'Responsavel' e 'Professor', o que é adequado para evitar redundância de atributos comuns como 'nome'."
+      },
+      {
+        "chatAnswer": "b",
+        "correctAnswer": "b",
+        "chatReasoning": "A opção B apresenta um diagrama de classes que reflete corretamente o cenário descrito. Cada estudante pode ter múltiplas matrículas (0..*), e cada matrícula está associada a uma turma específica (1..*). A turma está associada a um curso (1), e cada curso pode ter múltiplos horários (0..*). Além disso, cada estudante tem um responsável (1..*), e cada responsável pode ter múltiplos contatos (0..*). A estrutura do diagrama B está de acordo com a necessidade de registrar e consultar dados de matrículas, cursos, turmas, e horários, conforme solicitado pela fundação."
+      }
+    ]
   },
   {
     "question": 16,
@@ -286,7 +388,58 @@
     "tecnicalQuestion": true,
     "easeLevel": "Very Hard",
     "discriminationIndex": "Weak",
-    "attempts": []
+    "attempts": [
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "e",
+        "chatReasoning": "A mensagem 4 do diagrama é uma consulta para verificar a disponibilidade de UTI, e a resposta é a geração de um objeto UTI. Portanto, a mensagem 4 pode ser substituída pelo estereótipo <<create>>, que indica a criação de um objeto, sem causar prejuízo à interpretação correta do Diagrama de Sequência. As outras alternativas não estão corretas: A: Não há indicação de que Leito seja uma subclasse de UTI. B: O método registraPaciente() é chamado no objeto Registro, não no Paciente. C: Nem todos os objetos foram criados no instante de execução do Caso de Uso, como o Paciente e Registro. D: Não há erro na ausência de mensagens de retorno após a destruição dos objetos, pois isso não é obrigatório em diagramas de sequência."
+      },
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "e",
+        "chatReasoning": "A alternativa E está correta. No diagrama de sequência, a mensagem 4 é uma consulta para verificar a disponibilidade de UTI, e o objeto UTI é gerado em seguida. Substituir a mensagem 4 pelo estereótipo <<create>> não causaria prejuízo à interpretação, pois a criação do objeto UTI está implícita na sequência de ações. \n\nAnalisando as outras alternativas:\n\nA: Não há indicação no diagrama de que Leito é uma subclasse de UTI. \nB: O método registraPaciente() é chamado pelo objeto Paciente, mas não necessariamente implementado por ele. \nC: Nem todos os objetos foram criados no instante de execução do caso de uso. Por exemplo, Paciente e Registro já existem antes do início da sequência. \nD: O diagrama não apresenta erro ao não representar mensagens de retorno após a destruição dos objetos, pois isso não é uma prática comum ou necessária em diagramas de sequência."
+      },
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "e",
+        "chatReasoning": "A alternativa E está correta porque a mensagem 4, que é uma consulta para verificar a disponibilidade de UTI, pode ser substituída pelo estereótipo <<create>> sem causar prejuízo à interpretação do diagrama. Isso ocorre porque a mensagem 4 resulta na criação de um objeto UTI, como indicado pela linha de vida do objeto UTI que começa após a mensagem 4. As outras alternativas estão incorretas: A: Não há indicação de que Leito seja uma subclasse de UTI. B: O método registraPaciente() é chamado pelo objeto Paciente, mas não necessariamente implementado por ele. C: Nem todos os objetos foram criados no instante de execução; por exemplo, Paciente e Registro já existem antes do início do diagrama. D: Não há erro em não representar mensagens de retorno após a destruição de objetos, pois isso não é obrigatório em diagramas de sequência."
+      },
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "e",
+        "chatReasoning": "A alternativa E está correta porque a mensagem 4, que é uma consulta de disponibilidade de UTI, pode ser substituída pelo estereótipo <<create>> sem causar prejuízo à interpretação do Diagrama de Sequência. Isso ocorre porque a mensagem 4 resulta na criação de um objeto UTI, como indicado pela linha de vida do objeto UTI que começa após essa mensagem. \n\nA: Não há indicação no diagrama de que Leito seja uma subclasse de UTI. \nB: O método registraPaciente() é chamado pelo objeto Paciente, mas não necessariamente implementado por ele. \nC: Nem todos os objetos são criados no instante de execução do Caso de Uso, como o objeto Paciente, que já existe antes do início do diagrama. \nD: O diagrama não apresenta erro por não representar mensagens de retorno após a destruição dos objetos, pois isso não é obrigatório em diagramas de sequência."
+      },
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "e",
+        "chatReasoning": "A alternativa E está correta. A mensagem 4, que é uma consulta para verificar a disponibilidade de UTI, pode ser substituída pelo estereótipo <<create>> sem causar prejuízo à interpretação correta do Diagrama de Sequência. Isso porque a mensagem 5 indica que uma UTI é gerada, o que sugere que a mensagem 4 está relacionada à criação de um objeto UTI. \n\nA: Não há indicação de que 'Leito' seja uma subclasse de 'UTI'. \nB: O método 'registraPaciente()' é chamado no objeto 'Registro', não implementado por 'Paciente'. \nC: Nem todos os objetos foram criados no instante de execução; por exemplo, 'Paciente' e 'Registro' já existem antes do início do diagrama. \nD: O diagrama não apresenta erro ao não representar as mensagens de retorno após a destruição dos objetos, pois isso não é obrigatório em diagramas de sequência."
+      },
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "e",
+        "chatReasoning": "A alternativa E está correta porque a mensagem 4, que é uma consulta para verificar a disponibilidade de UTI, pode ser substituída pelo estereótipo <<create>> sem causar prejuízo à interpretação do diagrama. Isso ocorre porque a mensagem 4 resulta na criação de um objeto UTI, como indicado pela linha de vida que começa após essa mensagem. As outras alternativas estão incorretas: A: Não há indicação de que Leito seja uma subclasse de UTI no diagrama. B: O método registraPaciente() é chamado pelo objeto Paciente, mas não necessariamente implementado por ele. C: Nem todos os objetos foram criados no instante de execução; UTI e Leito são criados durante o processo. D: O diagrama não precisa representar mensagens de retorno após a destruição de objetos, pois isso não é um erro no contexto de diagramas de sequência."
+      },
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "e",
+        "chatReasoning": "A alternativa E está correta porque a mensagem 4, que é 'Consulta disponibilidade de UTI: consultaUTI()', pode ser substituída pelo estereótipo <<create>> sem causar prejuízo à interpretação correta do Diagrama de Sequência. Isso ocorre porque a mensagem 5 indica que uma UTI é gerada, o que implica que a consulta resulta na criação de uma instância de UTI. \n\nAnalisando as outras alternativas:\n\nA: Não há informações no diagrama que indiquem que 'Leito' é uma subclasse de 'UTI'.\n\nB: O método 'registraPaciente()' é enviado pelo objeto 'Paciente' para 'Registro', não implementado por 'Paciente'.\n\nC: Nem todos os objetos foram criados no instante de execução do Caso de Uso. Por exemplo, 'Paciente' e 'Registro' já existem antes do início da sequência.\n\nD: O diagrama não apresenta erro ao não representar as mensagens de retorno depois da destruição dos objetos, pois isso não é obrigatório em diagramas de sequência."
+      },
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "e",
+        "chatReasoning": "A alternativa E está correta porque a mensagem 4, que é uma consulta para a disponibilidade de UTI, pode ser representada pelo estereótipo <<create>> sem causar prejuízo à interpretação do diagrama. Isso indica que o objeto UTI está sendo criado naquele ponto do diagrama. As outras alternativas estão incorretas: A: Leito não é uma subclasse de UTI, pois o diagrama não indica relação de herança; B: O método registraPaciente() é chamado pelo objeto Paciente, mas não necessariamente implementado por ele; C: Nem todos os objetos foram criados no instante de execução, como indicado pela existência de objetos já presentes; D: O diagrama não está errado por não representar mensagens de retorno após a destruição dos objetos, pois isso não é um requisito obrigatório em diagramas de sequência."
+      },
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "e",
+        "chatReasoning": "A mensagem 4 no diagrama de sequência é uma consulta para verificar a disponibilidade de UTI. O estereótipo <<create>> é usado para indicar a criação de um objeto. No diagrama, a mensagem 5 indica que uma UTI é gerada após a consulta, o que implica na criação de um objeto UTI. Portanto, substituir a mensagem 4 por <<create>> não causaria prejuízo à interpretação correta, pois o resultado final é a criação de uma UTI. As outras alternativas estão incorretas: A: Leito não é uma subclasse de UTI, mas um objeto que interage com UTI. B: O método registraPaciente() é chamado no objeto Registro, não implementado por Paciente. C: Nem todos os objetos são criados no instante de execução, como Paciente e Registro. D: O diagrama não necessariamente precisa representar mensagens de retorno após a destruição de objetos."
+      },
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "e",
+        "chatReasoning": "A alternativa E está correta porque a mensagem 4, que é 'Consulta disponibilidade de UTI: consultaUTI()', pode ser substituída pelo estereótipo <<create>> sem causar prejuízo à interpretação correta do Diagrama de Sequência. Isso ocorre porque a mensagem 5 indica a criação de um objeto UTI, e o uso do estereótipo <<create>> seria apropriado para representar a criação de um objeto. \n\nA alternativa A está incorreta porque não há indicação no diagrama de que Leito é uma subclasse de UTI. \n\nA alternativa B está incorreta porque o método registraPaciente() é chamado pelo objeto Paciente, mas não necessariamente implementado por ele. \n\nA alternativa C está incorreta porque nem todos os objetos foram criados no instante de execução do Caso de Uso representado; por exemplo, Paciente e Registro já existem antes do início da sequência. \n\nA alternativa D está incorreta porque o diagrama não precisa necessariamente representar mensagens de retorno após a destruição dos objetos, já que a destruição é o ponto final da interação com esses objetos."
+      }
+    ]
   },
   {
     "question": 17,
@@ -307,7 +460,58 @@
     "tecnicalQuestion": true,
     "easeLevel": "Hard",
     "discriminationIndex": "Medium",
-    "attempts": []
+    "attempts": [
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "c",
+        "chatReasoning": "A consulta correta deve calcular a média dos valores movimentados por cliente e ordenar os resultados por essa média de forma decrescente. A alternativa C faz isso corretamente, usando INNER JOIN para unir as tabelas CLIENTE, CONTA e HISTORICO_MOVIMENTACAO, agrupando por CL.COD_CLIENTE e CL.NOME, e ordenando por AVG(HM.VAL_MOVIMENTADO) em ordem decrescente."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "c",
+        "chatReasoning": "A consulta correta deve calcular a média dos valores movimentados por cada cliente e ordenar os resultados por essa média de forma decrescente. A alternativa C faz isso corretamente, utilizando 'AVG(HM.VAL_MOVIMENTADO)' para calcular a média e 'GROUP BY CL.COD_CLIENTE, CL.NOME' para agrupar os resultados por cliente. Além disso, a cláusula 'ORDER BY AVG(HM.VAL_MOVIMENTADO) DESC' garante que os clientes sejam exibidos em ordem decrescente de valor médio movimentado."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "c",
+        "chatReasoning": "A consulta correta deve calcular a média dos valores movimentados por cliente e ordená-los de forma decrescente. A alternativa C faz isso corretamente ao usar 'AVG(HM.VAL_MOVIMENTADO)' e agrupar por 'CL.COD_CLIENTE, CL.NOME'. As outras alternativas não agrupam corretamente ou usam joins inadequados."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "c",
+        "chatReasoning": "A consulta correta deve calcular a média dos valores movimentados por cada cliente e ordená-los em ordem decrescente. A alternativa C faz isso corretamente, utilizando INNER JOIN para conectar as tabelas CLIENTE, CONTA e HISTORICO_MOVIMENTACAO, agrupando por cliente e calculando a média dos valores movimentados, e ordenando em ordem decrescente da média calculada."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "c",
+        "chatReasoning": "A consulta correta deve calcular a média dos valores movimentados por cada cliente e ordená-los de forma decrescente. A alternativa C faz isso corretamente ao usar a função AVG(HM.VAL_MOVIMENTADO) e agrupar os resultados por cliente (GROUP BY CL.COD_CLIENTE, CL.NOME). Além disso, a ordenação é feita corretamente por AVG(HM.VAL_MOVIMENTADO) DESC."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "c",
+        "chatReasoning": "A consulta correta deve calcular a média dos valores movimentados por cliente e ordená-los de forma decrescente. A alternativa C faz isso corretamente, utilizando as junções necessárias entre as tabelas CLIENTE, CONTA e HISTORICO_MOVIMENTACAO, agrupando os resultados por cliente e ordenando pela média dos valores movimentados de forma decrescente."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "c",
+        "chatReasoning": "A consulta correta deve calcular a média dos valores movimentados por cliente e ordená-los de forma decrescente. A alternativa C faz isso corretamente ao usar a função AVG para calcular a média dos valores movimentados, agrupar os resultados por cliente e ordenar pela média de forma decrescente."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "c",
+        "chatReasoning": "A consulta correta deve calcular a média dos valores movimentados por cada cliente, agrupando pelo nome do cliente e ordenando pela média em ordem decrescente. A alternativa C faz isso corretamente ao usar a função AVG para calcular a média, GROUP BY para agrupar por cliente, e ORDER BY AVG(HM.VAL_MOVIMENTADO) DESC para ordenar pela média de forma decrescente."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "c",
+        "chatReasoning": "A consulta correta deve calcular a média dos valores movimentados por cada cliente e ordená-los em ordem decrescente. A alternativa C faz isso corretamente ao usar a função AVG para calcular a média dos valores movimentados, agrupando por cliente e ordenando pelo valor médio de forma decrescente. As outras alternativas não agrupam corretamente ou utilizam joins inadequados."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "c",
+        "chatReasoning": "A consulta correta deve calcular a média dos valores movimentados por cliente, agrupando por cliente e ordenando pela média em ordem decrescente. A alternativa C faz isso corretamente ao usar a função AVG para calcular a média, GROUP BY para agrupar por cliente, e ORDER BY AVG(HM.VAL_MOVIMENTADO) DESC para ordenar do maior para o menor."
+      }
+    ]
   },
   {
     "question": 18,
@@ -549,7 +753,58 @@
     "tecnicalQuestion": true,
     "easeLevel": "Medium",
     "discriminationIndex": "Very Good",
-    "attempts": []
+    "attempts": [
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "e",
+        "chatReasoning": "A estação PROFESSORES01 está com a máscara de sub-rede configurada como 255.255.255.0, o que limita a comunicação apenas aos IPs do mesmo bloco de sub-rede (175.16.10.x). Para que ela consiga se comunicar com a estação PROFESSORES03, que está no bloco 175.16.30.x, é necessário alterar a máscara de sub-rede para 255.255.0.0, permitindo assim a comunicação entre sub-redes diferentes dentro do mesmo bloco maior (175.16.x.x)."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "e",
+        "chatReasoning": "A estação PROFESSORES01 possui a máscara de sub-rede 255.255.255.0, enquanto as outras estações usam 255.255.0.0. Isso impede a comunicação entre PROFESSORES01 e PROFESSORES03, pois elas estão em sub-redes diferentes. Alterar a máscara de sub-rede de PROFESSORES01 para 255.255.0.0 resolverá o problema, permitindo que as máquinas se comuniquem corretamente."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "e",
+        "chatReasoning": "A estação PROFESSORES01 está configurada com uma máscara de sub-rede 255.255.255.0, enquanto as outras estão com 255.255.0.0. Isso coloca PROFESSORES01 em uma sub-rede diferente, impedindo a comunicação com PROFESSORES03. Alterar a máscara de sub-rede de PROFESSORES01 para 255.255.0.0 resolverá o problema, permitindo que ambas as máquinas estejam na mesma sub-rede e se comuniquem corretamente."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "e",
+        "chatReasoning": "Para que a estação PROFESSORES01 consiga se comunicar com a estação PROFESSORES03, ambas precisam estar na mesma sub-rede. A estação PROFESSORES01 está configurada com a máscara de sub-rede 255.255.255.0, enquanto a estação PROFESSORES03 está com a máscara 255.255.0.0. Alterando a máscara de sub-rede da estação PROFESSORES01 para 255.255.0.0, ambas estarão na mesma sub-rede, permitindo a comunicação entre elas. Portanto, a alteração correta é a alternativa C."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "e",
+        "chatReasoning": "A estação PROFESSORES01 possui uma máscara de sub-rede 255.255.255.0, o que limita a comunicação apenas aos endereços IP dentro da mesma sub-rede 175.16.10.x. Para que ela consiga se comunicar com a estação PROFESSORES03, que está na sub-rede 175.16.30.x, é necessário alterar a máscara de sub-rede de PROFESSORES01 para 255.255.0.0, permitindo que ambas as máquinas estejam na mesma rede lógica e possam se comunicar diretamente."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "e",
+        "chatReasoning": "A estação PROFESSORES01 possui a máscara de sub-rede 255.255.255.0, o que a coloca em uma sub-rede diferente das outras estações. As estações PROFESSORES02 e PROFESSORES03 têm a máscara 255.255.0.0, permitindo que estejam na mesma sub-rede. Alterar a máscara de sub-rede da estação PROFESSORES01 para 255.255.0.0 permitirá que ela se comunique corretamente com a estação PROFESSORES03 e, assim, envie documentos para impressão."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "e",
+        "chatReasoning": "A estação PROFESSORES01 possui um endereço IP 175.16.10.200 com uma máscara de sub-rede 255.255.255.0, enquanto a estação PROFESSORES03 tem um endereço IP 175.16.30.200 com a mesma máscara de sub-rede. Isso coloca as duas máquinas em sub-redes diferentes, impedindo a comunicação direta entre elas. Alterar a máscara de sub-rede da estação PROFESSORES01 para 255.255.0.0 permitirá que ambas as máquinas estejam na mesma sub-rede, resolvendo o problema de comunicação."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "e",
+        "chatReasoning": "A estação PROFESSORES01 possui uma máscara de sub-rede 255.255.255.0, enquanto as outras estações têm uma máscara de 255.255.0.0. Isso significa que PROFESSORES01 está em uma sub-rede diferente e não consegue se comunicar com PROFESSORES03. Alterar a máscara de sub-rede de PROFESSORES01 para 255.255.0.0 permitirá que ambas as máquinas estejam na mesma sub-rede, resolvendo o problema de comunicação."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "e",
+        "chatReasoning": "A estação PROFESSORES01 está com a máscara de sub-rede configurada como 255.255.255.0, enquanto as outras máquinas estão usando 255.255.0.0. Isso impede que PROFESSORES01 se comunique corretamente com PROFESSORES03, pois elas estão em sub-redes diferentes. Alterar a máscara de sub-rede de PROFESSORES01 para 255.255.0.0 resolverá o problema, permitindo que ambas as máquinas estejam na mesma sub-rede e se comuniquem corretamente."
+      },
+      {
+        "chatAnswer": "c",
+        "correctAnswer": "e",
+        "chatReasoning": "A estação PROFESSORES01 possui a máscara de sub-rede 255.255.255.0, enquanto as outras estações estão configuradas com a máscara 255.255.0.0. Isso significa que PROFESSORES01 está em uma sub-rede diferente das outras máquinas, o que impede a comunicação direta entre elas. Alterar a máscara de sub-rede de PROFESSORES01 para 255.255.0.0 permitirá que todas as máquinas estejam na mesma sub-rede, possibilitando a comunicação e o envio de documentos para impressão na estação PROFESSORES03."
+      }
+    ]
   },
   {
     "question": 31,
@@ -569,7 +824,58 @@
     "tecnicalQuestion": true,
     "easeLevel": "Hard",
     "discriminationIndex": "Weak",
-    "attempts": []
+    "attempts": [
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "d",
+        "chatReasoning": "Analisando as afirmações: \n\nI. Incorreta. O diagrama mostra que 'Realizar Matrícula Fora do Prazo' é uma extensão, indicando que há diferenças nas tratativas.\n\nII. Correta. O uso de 'extend' sugere que realizar matrícula fora do prazo é opcional.\n\nIII. Correta. O diagrama mostra que 'Validar Aluno' é um passo incluído, logo é obrigatório.\n\nIV. Incorreta. O diagrama não especifica que a validação é feita a partir da matrícula informada no sistema.\n\nV. Correta. O diagrama mostra duas formas de validação, sugerindo que são diferentes.\n\nPortanto, a resposta correta é a alternativa D: II, III e V."
+      },
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "d",
+        "chatReasoning": "Analisando o diagrama de casos de uso, temos as seguintes observações:\n\nI. O aluno poderá realizar a matrícula fora do prazo e as tratativas são as mesmas da matrícula feita dentro do prazo. (Incorreta - O diagrama mostra que 'Realizar Matrícula Fora do Prazo' é uma extensão, indicando que há diferenças nas tratativas)\n\nII. O aluno poderá, opcionalmente, realizar a matrícula fora do prazo. (Correta - O uso de '<<extend>>' sugere que é uma extensão opcional)\n\nIII. O sistema, obrigatoriamente, deverá validar o aluno que realizar a matrícula fora do prazo. (Correta - A validação do aluno é incluída no processo de matrícula, indicando obrigatoriedade)\n\nIV. A validação do aluno deverá ser feita a partir da sua matrícula informada no sistema. (Incorreta - O diagrama não especifica que a validação é feita a partir da matrícula informada)\n\nV. A validação do aluno, a ser feita por retina, é diferente da validação feita pela digital. (Correta - O diagrama mostra dois casos de uso separados para validação via retina e digital)\n\nPortanto, a alternativa correta é D: II, III e V."
+      },
+      {
+        "chatAnswer": "e",
+        "correctAnswer": "d",
+        "chatReasoning": "Analisando o diagrama de casos de uso:\n\nI. O aluno poderá realizar a matrícula fora do prazo e as tratativas são as mesmas da matrícula feita dentro do prazo. (Incorreto, pois o diagrama mostra um caso de uso separado para matrícula fora do prazo, indicando que as tratativas podem ser diferentes.)\n\nII. O aluno poderá, opcionalmente, realizar a matrícula fora do prazo. (Correto, pois o uso de <<extend>> sugere que é uma extensão opcional do caso de uso principal.)\n\nIII. O sistema, obrigatoriamente, deverá validar o aluno que realizar a matrícula fora do prazo. (Correto, pois o diagrama mostra que a validação do aluno é incluída no processo de matrícula.)\n\nIV. A validação do aluno deverá ser feita a partir da sua matrícula informada no sistema. (Correto, pois a validação está diretamente ligada ao processo de matrícula.)\n\nV. A validação do aluno, a ser feita por retina, é diferente da validação feita pela digital. (Correto, pois o diagrama mostra dois casos de uso distintos para validação via retina e via digital.)\n\nPortanto, a alternativa correta é E: II, III, IV e V."
+      },
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "d",
+        "chatReasoning": "Analisando o diagrama: \n\nI. O aluno poderá realizar a matrícula fora do prazo e as tratativas são as mesmas da matrícula feita dentro do prazo. (Incorreta, pois o diagrama mostra que 'Realizar Matrícula Fora do Prazo' é uma extensão, sugerindo que há diferenças nas tratativas.)\n\nII. O aluno poderá, opcionalmente, realizar a matrícula fora do prazo. (Correta, pois 'Realizar Matrícula Fora do Prazo' é uma extensão, indicando que é opcional.)\n\nIII. O sistema, obrigatoriamente, deverá validar o aluno que realizar a matrícula fora do prazo. (Correta, pois a validação é incluída no processo de matrícula.)\n\nIV. A validação do aluno deverá ser feita a partir da sua matrícula informada no sistema. (Incorreta, pois o diagrama não especifica que a validação é feita a partir da matrícula informada.)\n\nV. A validação do aluno, a ser feita por retina, é diferente da validação feita pela digital. (Correta, pois o diagrama mostra dois métodos de validação distintos.)\n\nPortanto, a alternativa correta é D: II, III e V."
+      },
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "d",
+        "chatReasoning": "Analisando o diagrama: \n\nI. O aluno poderá realizar a matrícula fora do prazo e as tratativas são as mesmas da matrícula feita dentro do prazo. - INCORRETO. O diagrama mostra que 'Realizar Matrícula Fora do Prazo' é uma extensão, sugerindo que há diferenças nas tratativas.\n\nII. O aluno poderá, opcionalmente, realizar a matrícula fora do prazo. - CORRETO. A relação '<<extend>>' indica que é opcional.\n\nIII. O sistema, obrigatoriamente, deverá validar o aluno que realizar a matrícula fora do prazo. - CORRETO. A validação do aluno é incluída no processo de matrícula.\n\nIV. A validação do aluno deverá ser feita a partir da sua matrícula informada no sistema. - INCORRETO. O diagrama não especifica que a validação é feita a partir da matrícula informada.\n\nV. A validação do aluno, a ser feita por retina, é diferente da validação feita pela digital. - CORRETO. O diagrama mostra dois métodos distintos de validação.\n\nPortanto, a alternativa correta é D: II, III e V."
+      },
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "d",
+        "chatReasoning": "Analisando o diagrama: \n\nI. A afirmação está incorreta porque o diagrama não indica que as tratativas são as mesmas para matrículas dentro e fora do prazo. \n\nII. A afirmação está correta, pois 'Realizar Matrícula Fora do Prazo' é uma extensão opcional do caso de uso 'Realizar Matrícula'. \n\nIII. A afirmação está correta, pois 'Validar Aluno' é um caso de uso incluído, o que significa que é obrigatório para 'Realizar Matrícula Fora do Prazo'. \n\nIV. A afirmação está incorreta, pois o diagrama não especifica que a validação é feita a partir da matrícula informada no sistema. \n\nV. A afirmação está correta, pois o diagrama mostra que existem dois métodos diferentes de validação: via retina e via digital.\n\nPortanto, apenas as afirmações II, III e V estão corretas."
+      },
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "d",
+        "chatReasoning": "Analisando o diagrama: \n\nI. O aluno poderá realizar a matrícula fora do prazo e as tratativas são as mesmas da matrícula feita dentro do prazo. (Incorreta, pois o diagrama mostra que 'Realizar Matrícula Fora do Prazo' é uma extensão, indicando que há diferenças nas tratativas.)\n\nII. O aluno poderá, opcionalmente, realizar a matrícula fora do prazo. (Correta, pois 'Realizar Matrícula Fora do Prazo' é uma extensão opcional da 'Realizar Matrícula'.)\n\nIII. O sistema, obrigatoriamente, deverá validar o aluno que realizar a matrícula fora do prazo. (Correta, pois 'Validar Aluno' está incluído em 'Realizar Matrícula', e por extensão, também em 'Realizar Matrícula Fora do Prazo'.)\n\nIV. A validação do aluno deverá ser feita a partir da sua matrícula informada no sistema. (Incorreta, pois o diagrama não especifica que a validação é feita a partir da matrícula informada.)\n\nV. A validação do aluno, a ser feita por retina, é diferente da validação feita pela digital. (Correta, pois o diagrama mostra duas opções de validação: via retina e via digital.)\n\nPortanto, a resposta correta é a alternativa D: II, III e V."
+      },
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "d",
+        "chatReasoning": "Analisando o diagrama e as afirmações:\n\nI. O aluno poderá realizar a matrícula fora do prazo e as tratativas são as mesmas da matrícula feita dentro do prazo. - Incorreto. O diagrama mostra que 'Realizar Matrícula Fora do Prazo' é uma extensão, sugerindo que há diferenças nas tratativas.\n\nII. O aluno poderá, opcionalmente, realizar a matrícula fora do prazo. - Correto. O uso de 'extend' indica que é opcional.\n\nIII. O sistema, obrigatoriamente, deverá validar o aluno que realizar a matrícula fora do prazo. - Correto. A validação do aluno está incluída no processo de matrícula.\n\nIV. A validação do aluno deverá ser feita a partir da sua matrícula informada no sistema. - Não está explicitamente indicado no diagrama.\n\nV. A validação do aluno, a ser feita por retina, é diferente da validação feita pela digital. - Correto. O diagrama mostra dois métodos distintos de validação.\n\nPortanto, apenas as afirmações II, III e V estão corretas."
+      },
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "d",
+        "chatReasoning": "Analisando o diagrama e as afirmações: \n\nI. Incorreto. O diagrama mostra que 'Realizar Matrícula Fora do Prazo' é uma extensão, indicando que há um tratamento específico para essa situação, diferente da matrícula dentro do prazo.\n\nII. Correto. A extensão sugere que a matrícula fora do prazo é opcional.\n\nIII. Correto. A inclusão de 'Validar Aluno' indica que a validação é obrigatória para qualquer matrícula, incluindo fora do prazo.\n\nIV. Incorreto. O diagrama não especifica que a validação deve ser feita a partir da matrícula informada no sistema.\n\nV. Correto. O diagrama mostra duas formas distintas de validação: via retina e via digital.\n\nPortanto, as afirmações corretas são II, III e V."
+      },
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "d",
+        "chatReasoning": "Analisando o diagrama e as afirmações: \n\nI. Incorreta. O diagrama mostra que 'Realizar Matrícula Fora do Prazo' é uma extensão, indicando que há diferenças nas tratativas.\n\nII. Correta. A extensão sugere que a matrícula fora do prazo é opcional.\n\nIII. Correta. A validação do aluno é obrigatória, conforme o relacionamento 'include'.\n\nIV. Incorreta. O diagrama não especifica que a validação é feita a partir da matrícula informada.\n\nV. Correta. O diagrama mostra dois métodos de validação distintos: 'Validar via Retina' e 'Validar via Digital'.\n\nPortanto, a alternativa correta é D: II, III e V."
+      }
+    ]
   },
   {
     "question": 32,
@@ -644,6 +950,57 @@
     "tecnicalQuestion": true,
     "easeLevel": "Hard",
     "discriminationIndex": "Medium",
-    "attempts": []
+    "attempts": [
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "a",
+        "chatReasoning": "Vamos analisar cada afirmação:\n\nI. A tabela apresentada é ambígua, pois há pessoas para as quais a análise resultaria em dois resultados diferentes.\n- A tabela é ambígua porque uma pessoa que não é maior de idade (¬I(x)) pode ser classificada como inviável ou viável com preço R$500, dependendo do critério aplicado.\n\nII. Embora a tabela seja ambígua, não existe a possibilidade de o programa exibir mais de um resultado para uma pessoa.\n- O programa segue uma sequência de condições 'else if', garantindo que apenas o primeiro critério verdadeiro seja aplicado, evitando múltiplos resultados.\n\nIII. Segundo a tabela, não existe a possibilidade de pessoas sem residência própria serem contempladas com o seguro.\n- Isso é falso, pois o critério I(x) ∧ ¬R(x) ∧ ∃y (S(y) ∧ P(x, y)) permite que pessoas sem residência própria recebam seguro.\n\nIV. Segundo o funcionamento do programa, o seguro para uma pessoa menor de idade e sem residência própria é viável e lhe custará R$500.\n- De acordo com o último critério (¬I(x) ∨ (R(x) ∧ I(x))), uma pessoa menor de idade sem residência própria é viável com preço R$500.\n\nPortanto, as afirmações corretas são I, II e IV."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "a",
+        "chatReasoning": "Analisando as afirmações:\n\nI. A tabela apresentada é ambígua, pois há pessoas para as quais a análise resultaria em dois resultados diferentes. \n- Verdadeiro. A última linha da tabela (¬I(x) ∨ (R(x) ∧ I(x))) pode se sobrepor com outras condições, criando ambiguidade.\n\nII. Embora a tabela seja ambígua, não existe a possibilidade de o programa exibir mais de um resultado para uma pessoa.\n- Verdadeiro. O código em C usa 'else if', garantindo que apenas um resultado seja exibido.\n\nIII. Segundo a tabela, não existe a possibilidade de pessoas sem residência própria serem contempladas com o seguro.\n- Falso. A terceira linha da tabela (I(x) ∧ ¬R(x) ∧ ∃y (S(y) ∧ P(x, y))) permite seguro para pessoas sem residência própria.\n\nIV. Segundo o funcionamento do programa, o seguro para uma pessoa menor de idade e sem residência própria é viável e lhe custará R$500.\n- Falso. Menores de idade são considerados inviáveis pela primeira linha da tabela.\n\nPortanto, a resposta correta é a alternativa A: I e II."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "a",
+        "chatReasoning": "Analisando cada afirmação:\n\nI. A tabela apresentada é ambígua, pois há pessoas para as quais a análise resultaria em dois resultados diferentes. \n- A tabela pode ser ambígua, pois uma pessoa que não é maior de idade (¬I(x)) poderia se encaixar tanto no critério de inviabilidade quanto no critério de viabilidade com preço de R$500.\n\nII. Embora a tabela seja ambígua, não existe a possibilidade de o programa exibir mais de um resultado para uma pessoa.\n- O programa segue uma estrutura de decisão que não permite múltiplos resultados para a mesma pessoa, mesmo que a tabela seja ambígua.\n\nIII. Segundo a tabela, não existe a possibilidade de pessoas sem residência própria serem contempladas com o seguro.\n- Isso é falso, pois há um critério que permite viabilidade para pessoas sem residência própria (I(x) ∧ ¬R(x) ∧ ∃y (S(y) ∧ P(x, y))).\n\nIV. Segundo o funcionamento do programa, o seguro para uma pessoa menor de idade e sem residência própria é viável e lhe custará R$500.\n- Isso é falso, pois o critério para R$500 é ¬I(x) ∨ (R(x) ∧ I(x)), o que não se aplica a menores de idade sem residência própria.\n\nPortanto, apenas as afirmações I e II são corretas."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "a",
+        "chatReasoning": "Analisando as afirmações:\n\nI. A tabela é ambígua porque uma pessoa que não é maior de idade (¬I(x)) pode ser classificada como inviável ou viável com preço de R$500, dependendo de como a última linha é interpretada.\n\nII. Apesar da ambiguidade, o programa em C não exibirá mais de um resultado porque as condições são avaliadas em sequência e a primeira condição verdadeira determina o resultado.\n\nIII. A afirmação é falsa. Pessoas sem residência própria (¬R(x)) podem ser contempladas com seguro, como indicado pela terceira linha da tabela (I(x) ∧ ¬R(x) ∧ ∃y (S(y) ∧ P(x, y))).\n\nIV. A afirmação é falsa. Pessoas menores de idade (¬I(x)) são consideradas inviáveis pela primeira linha da tabela.\n\nPortanto, apenas as afirmações I e II são corretas."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "a",
+        "chatReasoning": "Analisando as afirmações:\n\nI. A tabela é ambígua porque uma pessoa que não é maior de idade (¬I(x)) pode ser considerada inviável, mas também pode ser considerada viável com preço de R$500, conforme o último critério (¬I(x) ∨ (R(x) ∧ I(x))).\n\nII. Apesar da ambiguidade na tabela, o programa em C não exibirá mais de um resultado, pois utiliza uma estrutura de controle 'else if', que garante que apenas o primeiro critério verdadeiro será considerado.\n\nIII. A afirmação é falsa, pois o terceiro critério da tabela (I(x) ∧ ¬R(x) ∧ ∃y (S(y) ∧ P(x, y))) permite que pessoas sem residência própria sejam contempladas com o seguro.\n\nIV. A afirmação é falsa, pois uma pessoa menor de idade (¬I(x)) é considerada inviável no primeiro critério da tabela, contradizendo a afirmação de que seria viável com custo de R$500.\n\nPortanto, apenas as afirmações I e II são corretas."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "a",
+        "chatReasoning": "Analisando as afirmações:\n\nI. A tabela é ambígua porque uma pessoa que não é maior de idade (¬I(x)) pode ser classificada como inviável e também como viável com preço de R$500, devido à última linha da tabela (¬I(x) ∨ (R(x) ∧ I(x))).\n\nII. Apesar da ambiguidade, o programa não exibirá mais de um resultado para uma pessoa, pois as condições são verificadas sequencialmente e a primeira condição verdadeira é a que será executada.\n\nIII. A afirmação é falsa, pois a tabela permite que pessoas sem residência própria (¬R(x)) sejam contempladas com seguro, como na terceira linha da tabela.\n\nIV. A afirmação é falsa, pois uma pessoa menor de idade e sem residência própria seria classificada como inviável pela primeira linha da tabela.\n\nPortanto, apenas as afirmações I e II são corretas."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "a",
+        "chatReasoning": "Vamos analisar cada afirmação:\n\nI. A tabela apresentada é ambígua, pois há pessoas para as quais a análise resultaria em dois resultados diferentes.\n- A tabela possui critérios que podem se sobrepor, como o último critério que é mais genérico. Portanto, a afirmação I é verdadeira.\n\nII. Embora a tabela seja ambígua, não existe a possibilidade de o programa exibir mais de um resultado para uma pessoa.\n- O programa em C utiliza uma estrutura de 'else if', garantindo que apenas o primeiro critério verdadeiro será executado. Assim, a afirmação II é verdadeira.\n\nIII. Segundo a tabela, não existe a possibilidade de pessoas sem residência própria serem contempladas com o seguro.\n- O terceiro critério permite que pessoas sem residência própria (¬R(x)) sejam viáveis para o seguro. Portanto, a afirmação III é falsa.\n\nIV. Segundo o funcionamento do programa, o seguro para uma pessoa menor de idade e sem residência própria é viável e lhe custará R$500.\n- Pelo programa, se a pessoa não é maior de idade (¬I(x)), o seguro é inviável, contradizendo a afirmação IV.\n\nPortanto, apenas as afirmações I e II são corretas."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "a",
+        "chatReasoning": "Vamos analisar cada afirmação:\n\nI. A tabela apresentada é ambígua, pois há pessoas para as quais a análise resultaria em dois resultados diferentes.\n- A tabela possui critérios que podem se sobrepor. Por exemplo, uma pessoa que não é maior de idade (¬I(x)) pode ser classificada como inviável, mas também pode ser classificada como viável com preço de R$500, já que ¬I(x) está presente na última linha da tabela. Portanto, a afirmação I é verdadeira.\n\nII. Embora a tabela seja ambígua, não existe a possibilidade de o programa exibir mais de um resultado para uma pessoa.\n- O programa usa uma estrutura de 'else if', o que significa que ele irá parar na primeira condição verdadeira e não avaliará as seguintes. Portanto, mesmo que a tabela seja ambígua, o programa não exibirá mais de um resultado. A afirmação II é verdadeira.\n\nIII. Segundo a tabela, não existe a possibilidade de pessoas sem residência própria serem contempladas com o seguro.\n- A tabela mostra que pessoas sem residência própria (¬R(x)) podem ser viáveis se forem maiores de idade e tiverem um parente com seguro, resultando em um preço de R$300. Portanto, a afirmação III é falsa.\n\nIV. Segundo o funcionamento do programa, o seguro para uma pessoa menor de idade e sem residência própria é viável e lhe custará R$500.\n- O programa considera a condição ¬I(x) como viável com preço de R$500. Portanto, mesmo que a pessoa seja menor de idade e sem residência própria, o seguro é considerado viável. A afirmação IV é verdadeira.\n\nPortanto, as afirmações corretas são I e II, o que corresponde à alternativa A."
+      },
+      {
+        "chatAnswer": "a",
+        "correctAnswer": "a",
+        "chatReasoning": "Analisando as afirmações:\n\nI. A tabela é ambígua porque uma pessoa que não é maior de idade (¬I(x)) pode ser classificada como inviável ou viável com preço de R$500, dependendo da interpretação da última linha da tabela.\n\nII. Embora a tabela seja ambígua, o programa implementado não permite mais de um resultado para uma pessoa, pois utiliza estruturas de controle que garantem que apenas uma condição será satisfeita.\n\nIII. A afirmação é falsa. A tabela permite que pessoas sem residência própria (¬R(x)) possam ser contempladas com o seguro, como mostra a terceira linha.\n\nIV. A afirmação é falsa. Pessoas menores de idade e sem residência própria são classificadas como inviáveis, conforme a primeira linha da tabela.\n\nPortanto, apenas as afirmações I e II são corretas."
+      },
+      {
+        "chatAnswer": "d",
+        "correctAnswer": "a",
+        "chatReasoning": "Vamos analisar cada afirmação:\n\nI. A tabela apresentada é ambígua, pois há pessoas para as quais a análise resultaria em dois resultados diferentes.\n- A tabela possui critérios que podem se sobrepor, como o último critério que é uma disjunção, permitindo múltiplas interpretações para algumas combinações de variáveis. Portanto, a afirmação I é verdadeira.\n\nII. Embora a tabela seja ambígua, não existe a possibilidade de o programa exibir mais de um resultado para uma pessoa.\n- O programa segue uma ordem de verificação com 'else if', garantindo que apenas a primeira condição verdadeira será executada. Assim, mesmo que a tabela seja ambígua, o programa não exibirá mais de um resultado. A afirmação II é verdadeira.\n\nIII. Segundo a tabela, não existe a possibilidade de pessoas sem residência própria serem contempladas com o seguro.\n- A terceira linha da tabela mostra que pessoas sem residência própria (¬R(x)) podem ser viáveis se tiverem parentes com seguro. Portanto, a afirmação III é falsa.\n\nIV. Segundo o funcionamento do programa, o seguro para uma pessoa menor de idade e sem residência própria é viável e lhe custará R$500.\n- O último critério da tabela (¬I(x) ∨ (R(x) ∧ I(x))) cobre o caso de menor de idade, tornando o seguro viável por R$500. A afirmação IV é verdadeira.\n\nPortanto, as afirmações corretas são I, II e IV."
+      }
+    ]
   }
 ]

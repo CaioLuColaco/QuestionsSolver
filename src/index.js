@@ -121,11 +121,11 @@ async function sendQuestionToOpenAI(question, base64Images) {
 
     let content = response.choices[0].message.content.trim();
 
-    if (content.startsWith('```')) {
-      content = content.replace(/```(?:json)?\n?/g, '').replace(/```$/, '').trim();
-    }
+    const jsonStart = content.indexOf('{');
+    const jsonEnd = content.lastIndexOf('}');
+    const jsonString = content.slice(jsonStart, jsonEnd + 1);
 
-    return JSON.parse(content);
+    return JSON.parse(jsonString);
   } catch (error) {
     console.error(`Erro na questão ${question.question}:`, error.message);
     return null;
@@ -148,4 +148,13 @@ async function saveUpdatedQuestions(filePath, updatedQuestions) {
   }
 }
 
-index();
+const orchestrator = async () => {
+  const contador = 10
+
+  for (let i = 0; i < contador; i++) {
+    console.log("Iniciando rodagem " + (i + 1) + " de " + contador);
+    await index();
+  }
+}
+
+orchestrator();
