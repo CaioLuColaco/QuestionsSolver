@@ -87,33 +87,36 @@ async function sendQuestionToOpenAI(question, base64Images) {
             type: 'text',
             text: `
               Você é um especialista em resolução de questões visuais e técnicas com imagens.
-
+              
               ---
 
               ### Instruções
+
               Resolva a questão apresentada a seguir da seguinte forma:
+
               1. Descreva com clareza os elementos relevantes observados nas imagens.
-              2. Desenvolva um raciocínio passo a passo, explicitando cada dedução até chegar à resposta correta.
+
+              2. Desenvolva um raciocínio passo a passo, com base na sua descrição detalhada das imagens, explicitando cada dedução até chegar à resposta correta.
+
               3. Justifique a alternativa escolhida com base no enunciado e nas imagens, e refute as demais.
+
               4. Caso nenhuma alternativa seja correta, responda com a letra "I".
-              5. Ao final, retorne a resposta no seguinte formato JSON:
-              {
-                "chatAnswer": "letra",
-                "chatReasoning": "raciocínio completo"
-              }
+
+              5. Ao final, retorne no seguinte formato JSON:
+
+              {\n "chatAnswer": "letra",\n "chatReasoning": "raciocínio completo"\n}
 
               ---
 
               ### Exemplo
+
               **Questão 0:**
               Quantos triângulos estão presentes na imagem?
-
               **Imagem:** mostra uma figura composta por dois triângulos pequenos dentro de um triângulo maior.
-
               **Alternativas:**
-              A: 2  
-              B: 3  
-              C: 4  
+              A: 2
+              B: 3
+              C: 4
               D: 5
               I: Caso idenifique que nenhuma alternativa é correta, ou que a questão possui erros de lógica ou elaboração.
 
@@ -122,21 +125,20 @@ async function sendQuestionToOpenAI(question, base64Images) {
               2. Eles estão posicionados dentro de um triângulo maior que os envolve.
               3. Portanto, temos 2 triângulos pequenos + 1 grande formado por eles = 3 triângulos.
               4. A alternativa correta é a letra B.
-
               **Resposta em JSON:**
               {
-                "chatAnswer": "b",
-                "chatReasoning": "A imagem contém dois triângulos pequenos e um triângulo maior formado pela junção deles, totalizando três triângulos. Por isso, a alternativa B é a correta."
+              "chatAnswer": "b",
+              "chatReasoning": "A imagem contém dois triângulos pequenos e um triângulo maior formado pela junção deles, totalizando três triângulos. Por isso, a alternativa B é a correta."
               }
-
               ---
-
               Agora, resolva a seguinte questão real:
 
               **Questão ${question.question}:**
+
               ${question.text}
 
               **Alternativas:**
+
               ${formattedOptions}
 
               **Imagens:**
