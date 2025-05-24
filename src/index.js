@@ -86,59 +86,6 @@ async function sendQuestionToOpenAI(question, base64Images) {
           {
             type: 'text',
             text: `
-              Você é um especialista em resolução de questões visuais e técnicas com imagens.
-
-              ---
-
-              ### Instruções
-              Resolva a questão apresentada a seguir utilizando a técnica Tree of Thoughts da seguinte forma:
-
-              1. Decomponha o problema em uma sequência de pensamentos (steps) intermediários. Cada "thought" é uma etapa lógica clara e significativa no processo de solução.
-              2. Em cada estado, gere múltiplas opções de pensamento possíveis para avançar na solução (branching).
-              3. Avalie cada pensamento candidato com base em critérios de progresso rumo à solução final. Use raciocínio deliberado para determinar qual pensamento seguir (pode usar votos, pontuações ou classificações).
-              4. Continue explorando os caminhos mais promissores utilizando uma estratégia de busca (ex: busca em largura - BFS ou busca em profundidade - DFS). Considere retroceder se necessário (backtracking).
-              5. Ao atingir um estado final (uma solução completa), pare a busca e apresente a resposta final.
-              6. Caso nenhum caminho leve a uma resposta válida ou se todas as alternativas forem incorretas, retorne a letra "I".
-              7. Ao final, retorne no seguinte formato JSON:
-
-              {\n "chatAnswer": "letra",\n "chatReasoning": "raciocínio completo"\n}
-
-              ---
-
-              ### Exemplo
-              **Questão 0:**
-              Quantos triângulos estão presentes na imagem?
-
-              **Imagem:** mostra dois triângulos pequenos dentro de um triângulo maior.
-
-              **Alternativas:**
-              A: 2  
-              B: 3  
-              C: 4  
-              D: 5  
-              I: Nenhuma das anteriores
-
-              **Etapas de raciocínio como árvore:**
-              1. Estado inicial: imagem com formas geométricas.
-              2. Geração de pensamentos:
-                - T1: Contar apenas os dois triângulos pequenos → Total: 2 → A
-                - T2: Contar os dois pequenos + o triângulo maior → Total: 3 → B
-                - T3: Considerar a sobreposição e sub-regiões → Possível confusão, mas não há subdivisão extra visível
-              3. Avaliação dos pensamentos:
-                - T1: Parcialmente correto, mas ignora figura maior.
-                - T2: Coerente com a estrutura da imagem.
-                - T3: Suposições não sustentadas pela imagem.
-              4. Escolha final por heurística/voto: T2 é o pensamento mais promissor.
-
-              **Resposta em JSON:**
-              {
-                "chatAnswer": "b",
-                "chatReasoning": "Após explorar diferentes caminhos de raciocínio, o pensamento que considera os dois triângulos pequenos e o triângulo maior foi avaliado como mais consistente com a imagem. Assim, a resposta correta é B."
-              }
-
-              ---
-
-              Agora, resolva a seguinte questão real:
 
               **Questão ${question.question}:**
               ${question.text}
@@ -147,6 +94,15 @@ async function sendQuestionToOpenAI(question, base64Images) {
               ${formattedOptions}
 
               **Imagens:**
+
+              Siga as instruções:
+
+              1. Resolva a questão.
+              Se nenhuma alternativa for correta, use a letra "I".
+
+              Retorne no seguinte formato JSON:
+
+              {\n "chatAnswer": "letra",\n "chatReasoning": "raciocínio completo"\n}
               `.trim()
             },
           ...base64Images.map((image) => ({
