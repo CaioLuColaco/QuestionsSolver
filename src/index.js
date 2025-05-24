@@ -87,58 +87,59 @@ async function sendQuestionToOpenAI(question, base64Images) {
             type: 'text',
             text: `
               Você é um especialista em resolução de questões visuais e técnicas com imagens.
-              
+
               ---
 
               ### Instruções
+              Resolva a questão apresentada a seguir utilizando a técnica de Self-Consistency da seguinte forma:
 
-              Resolva a questão apresentada a seguir da seguinte forma:
-
-              1. Descreva com clareza os elementos relevantes observados nas imagens.
-
-              2. Desenvolva um raciocínio passo a passo, com base na sua descrição detalhada das imagens, explicitando cada dedução até chegar à resposta correta.
-
-              3. Justifique a alternativa escolhida com base no enunciado e nas imagens, e refute as demais.
-
-              4. Caso nenhuma alternativa seja correta, responda com a letra "I".
-
-              5. Ao final, retorne no seguinte formato JSON:
+              1. Gere múltiplos caminhos de raciocínio plausíveis para resolver a questão, considerando diferentes abordagens válidas.
+              2. Para cada caminho, explicite a dedução passo a passo até chegar a uma resposta final.
+              3. Após gerar todos os caminhos de raciocínio, identifique qual resposta é mais consistente entre os diferentes caminhos gerados (i.e., a resposta mais recorrente entre eles).
+              4. Justifique a resposta final escolhida com base na consistência entre os caminhos e refute outras possíveis respostas, se necessário.
+              5. Caso nenhuma alternativa seja correta, ou se houver inconsistência significativa nos caminhos válidos, retorne a letra "I".
+              6. Ao final, retorne no seguinte formato JSON:
 
               {\n "chatAnswer": "letra",\n "chatReasoning": "raciocínio completo"\n}
 
               ---
 
               ### Exemplo
-
               **Questão 0:**
               Quantos triângulos estão presentes na imagem?
-              **Imagem:** mostra uma figura composta por dois triângulos pequenos dentro de um triângulo maior.
-              **Alternativas:**
-              A: 2
-              B: 3
-              C: 4
-              D: 5
-              I: Caso idenifique que nenhuma alternativa é correta, ou que a questão possui erros de lógica ou elaboração.
 
-              **Resolução passo a passo:**
-              1. A imagem contém dois triângulos pequenos desenhados lado a lado.
-              2. Eles estão posicionados dentro de um triângulo maior que os envolve.
-              3. Portanto, temos 2 triângulos pequenos + 1 grande formado por eles = 3 triângulos.
-              4. A alternativa correta é a letra B.
+              **Imagem:** mostra uma figura composta por dois triângulos pequenos dentro de um triângulo maior.
+
+              **Alternativas:**
+              A: 2  
+              B: 3  
+              C: 4  
+              D: 5  
+              I: Nenhuma das anteriores
+
+              **Caminhos de raciocínio gerados:**
+              1. Há dois triângulos pequenos lado a lado, e um triângulo grande envolvendo os dois. Total: 3 triângulos. → Resposta: B
+              2. Contando os dois triângulos internos e o triângulo externo que os contém: 2 + 1 = 3 triângulos. → Resposta: B
+              3. Um triângulo formado pela junção dos dois menores, mais os dois individuais: 3 triângulos. → Resposta: B
+              4. Poderia parecer que são mais, mas visualmente distinguem-se 3 triângulos: dois internos e um externo. → Resposta: B
+
+              **Resposta Final (por consistência):**
+              A resposta mais consistente entre os caminhos gerados é a letra B.
+
               **Resposta em JSON:**
               {
-              "chatAnswer": "b",
-              "chatReasoning": "A imagem contém dois triângulos pequenos e um triângulo maior formado pela junção deles, totalizando três triângulos. Por isso, a alternativa B é a correta."
+                "chatAnswer": "b",
+                "chatReasoning": "A maioria dos caminhos gerados concordam que existem dois triângulos internos e um triângulo externo, totalizando três triângulos. Portanto, a resposta mais consistente é a alternativa B."
               }
+
               ---
+
               Agora, resolva a seguinte questão real:
 
               **Questão ${question.question}:**
-
               ${question.text}
 
               **Alternativas:**
-
               ${formattedOptions}
 
               **Imagens:**
